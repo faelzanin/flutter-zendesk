@@ -119,7 +119,7 @@ public class ZendeskPlugin implements FlutterPlugin, ActivityAware, ChatApi, Pro
                 .withEmailFieldStatus(PreChatFormFieldStatus.HIDDEN)
                 .withPhoneFieldStatus(PreChatFormFieldStatus.HIDDEN)
                 .withDepartmentFieldStatus(PreChatFormFieldStatus.HIDDEN)
-                .build()
+                .build();
 
     MessagingActivity.builder().withEngines(ChatEngine.engine()).show(activity, chatConfiguration);
   }
