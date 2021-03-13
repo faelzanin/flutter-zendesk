@@ -57,6 +57,13 @@
     chatConfiguration.isChatTranscriptPromptEnabled = [[self null:input.isChatTranscriptPromptEnabled
                                                                or:@(chatConfiguration.isChatTranscriptPromptEnabled)] boolValue];
     
+    ZDKChatFormConfiguration *formConfiguration = [[ZDKChatFormConfiguration alloc] initWithName:ZDKFormFieldStatusHidden
+                                                                                       email:ZDKFormFieldStatusHidden
+                                                                                 phoneNumber:ZDKFormFieldStatusHidden
+                                                                                  department:ZDKFormFieldStatusHidden];
+
+    chatConfiguration.preChatFormConfiguration = formConfiguration;
+
     NSError *localError = nil;
     
     NSArray *engines = @[
