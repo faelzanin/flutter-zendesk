@@ -228,7 +228,7 @@ void ProfileApiSetup(id<FlutterBinaryMessenger> binaryMessenger, id<ProfileApi> 
   {
     FlutterBasicMessageChannel *channel =
       [FlutterBasicMessageChannel
-        messageChannelWithName:@"dev.flutter.pigeon.ProfileApi.setVisitorInfo"
+        messageChannelWithName:@"dev.flutter.pigeon.Profile.setVisitorInfo"
         binaryMessenger:binaryMessenger];
     if (api) {
       [channel setMessageHandler:^(id _Nullable message, FlutterReply callback) {
