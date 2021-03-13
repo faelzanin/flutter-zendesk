@@ -284,7 +284,7 @@ public class ZendeskPigeon {
     static void setup(BinaryMessenger binaryMessenger, ProfileApi api) {
       {
         BasicMessageChannel<Object> channel =
-            new BasicMessageChannel<>(binaryMessenger, "dev.flutter.pigeon.ProfileApi.setVisitorInfo", new StandardMessageCodec());
+            new BasicMessageChannel<>(binaryMessenger, "dev.flutter.pigeon.Profile.setVisitorInfo", new StandardMessageCodec());
         if (api != null) {
           channel.setMessageHandler((message, reply) -> {
             HashMap<String, HashMap> wrapped = new HashMap<>();
