@@ -20,6 +20,7 @@ import io.flutter.plugin.common.PluginRegistry.Registrar;
 import java.util.ArrayList;
 import zendesk.chat.Chat;
 import zendesk.chat.ChatConfiguration;
+import zendesk.chat.PreChatFormFieldStatus;
 import zendesk.chat.ChatEngine;
 import zendesk.chat.ChatProvider;
 import zendesk.chat.ProfileProvider;
@@ -113,7 +114,12 @@ public class ZendeskPlugin implements FlutterPlugin, ActivityAware, ChatApi, Pro
                 .withAgentAvailabilityEnabled(arg.getIsAgentAvailabilityEnabled())
                 .withPreChatFormEnabled(arg.getIsPreChatFormEnabled())
                 .withOfflineFormEnabled(arg.getIsOfflineFormEnabled())
-                .withTranscriptEnabled(arg.getIsChatTranscriptPromptEnabled()).withNameFieldStatus(PreChatFormFieldStatus.HIDDEN).withEmailFieldStatus(PreChatFormFieldStatus.HIDDEN).withPhoneFieldStatus(PreChatFormFieldStatus.HIDDEN).withDepartmentFieldStatus(PreChatFormFieldStatus.HIDDEN).build();
+                .withTranscriptEnabled(arg.getIsChatTranscriptPromptEnabled())
+                .withNameFieldStatus(PreChatFormFieldStatus.HIDDEN)
+                .withEmailFieldStatus(PreChatFormFieldStatus.HIDDEN)
+                .withPhoneFieldStatus(PreChatFormFieldStatus.HIDDEN)
+                .withDepartmentFieldStatus(PreChatFormFieldStatus.HIDDEN)
+                .build()
 
     MessagingActivity.builder().withEngines(ChatEngine.engine()).show(activity, chatConfiguration);
   }
