@@ -124,7 +124,7 @@ public class ZendeskPigeon {
     }
   }
 
-    /** Generated class from Pigeon that represents data sent in messages. */
+  /** Generated class from Pigeon that represents data sent in messages. */
   public static class SetVisitorInfoRequest {
     private String visitorName;
     public String getVisitorName() { return visitorName; }
@@ -138,25 +138,25 @@ public class ZendeskPigeon {
     public String getVisitorPhone() { return visitorPhone; }
     public void setVisitorPhone(String setterArg) { this.visitorPhone = setterArg; }
 
-    Map<String, Object> toMap() {
-      Map<String, Object> toMapResult = new HashMap<>();
+    HashMap toMap() {
+      HashMap<String, Object> toMapResult = new HashMap<>();
       toMapResult.put("visitorName", visitorName);
       toMapResult.put("visitorEmail", visitorEmail);
       toMapResult.put("visitorPhone", visitorPhone);
       return toMapResult;
     }
-    static SetVisitorInfoRequest fromMap(Map<String, Object> map) {
+    static SetVisitorInfoRequest fromMap(HashMap map) {
       SetVisitorInfoRequest fromMapResult = new SetVisitorInfoRequest();
       Object visitorName = map.get("visitorName");
       fromMapResult.visitorName = (String)visitorName;
       Object visitorEmail = map.get("visitorEmail");
       fromMapResult.visitorEmail = (String)visitorEmail;
       Object visitorPhone = map.get("visitorPhone");
-      fromMapResult.visitorPhone = (String)visitorPhone;
+      fromMapResult.visitorPhone = (String)phoneNumber;
       return fromMapResult;
     }
-  } 
-  
+  }
+
   /** Generated class from Pigeon that represents data sent in messages. */
   public static class VisitorTagsRequest {
     private ArrayList tags;
