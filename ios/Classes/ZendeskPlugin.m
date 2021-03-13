@@ -48,8 +48,8 @@
     
     ZDKChatConfiguration *chatConfiguration = [[ZDKChatConfiguration alloc] init];
     
-    chatConfiguration.isPreChatFormEnabled = [[self null:input.isPreChatFormEnabled
-                                                      or:@(chatConfiguration.isPreChatFormEnabled)] boolValue];
+    chatConfiguration.isPreChatFormEnabled = YES;
+    
     chatConfiguration.isOfflineFormEnabled = [[self null:input.isOfflineFormEnabled
                                                       or:@(chatConfiguration.isOfflineFormEnabled)] boolValue];
     chatConfiguration.isAgentAvailabilityEnabled = [[self null:input.isAgentAvailabilityEnabled
