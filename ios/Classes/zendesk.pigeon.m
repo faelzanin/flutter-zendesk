@@ -124,15 +124,15 @@ static NSDictionary* wrapResult(NSDictionary *result, FlutterError *error) {
 @implementation SetVisitorInfoRequest
 +(SetVisitorInfoRequest*)fromMap:(NSDictionary*)dict {
   SetVisitorInfoRequest* result = [[SetVisitorInfoRequest alloc] init];
-  result.name = dict[@"name"];
+  result.name = dict[@"visitorName"];
   if ((NSNull *)result.name == [NSNull null]) {
     result.name = nil;
   }
-  result.email = dict[@"email"];
+  result.email = dict[@"visitorEmail"];
   if ((NSNull *)result.email == [NSNull null]) {
     result.email = nil;
   }
-  result.phoneNumber = dict[@"phoneNumber"];
+  result.phoneNumber = dict[@"visitorPhone"];
   if ((NSNull *)result.phoneNumber == [NSNull null]) {
     result.phoneNumber = nil;
   }
