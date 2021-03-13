@@ -162,19 +162,19 @@ public class ZendeskPigeon {
 
   /** Generated class from Pigeon that represents data sent in messages. */
   public static class VisitorTagsRequest {
-    private List<Object> tags;
-    public List<Object> getTags() { return tags; }
-    public void setTags(List<Object> setterArg) { this.tags = setterArg; }
+    private ArrayList tags;
+    public ArrayList getTags() { return tags; }
+    public void setTags(ArrayList setterArg) { this.tags = setterArg; }
 
-    Map<String, Object> toMap() {
-      Map<String, Object> toMapResult = new HashMap<>();
+    HashMap toMap() {
+      HashMap<String, Object> toMapResult = new HashMap<>();
       toMapResult.put("tags", tags);
       return toMapResult;
     }
-    static VisitorTagsRequest fromMap(Map<String, Object> map) {
+    static VisitorTagsRequest fromMap(HashMap map) {
       VisitorTagsRequest fromMapResult = new VisitorTagsRequest();
       Object tags = map.get("tags");
-      fromMapResult.tags = (List<Object>)tags;
+      fromMapResult.tags = (ArrayList)tags;
       return fromMapResult;
     }
   }

@@ -109,7 +109,7 @@ public class ZendeskPlugin implements FlutterPlugin, ActivityAware, ChatApi, Pro
       return;
     }
 
-    ChatConfiguration.builder()
+    ChatConfiguration chatConfiguration = ChatConfiguration.builder()
                 .withAgentAvailabilityEnabled(arg.getIsAgentAvailabilityEnabled())
                 .withPreChatFormEnabled(arg.getIsPreChatFormEnabled())
                 .withOfflineFormEnabled(arg.getIsOfflineFormEnabled())
@@ -124,14 +124,14 @@ public class ZendeskPlugin implements FlutterPlugin, ActivityAware, ChatApi, Pro
     final ProfileProvider profileProvider = getProfileProvider();
 
     Builder builder = VisitorInfo.builder();
-    if (!TextUtils.isEmpty(arg.getName())) {
-      builder = builder.withName(arg.getName());
+    if (!TextUtils.isEmpty(arg.getVisitorName())) {
+      builder = builder.withName(arg.getVisitorName());
     }
-    if (!TextUtils.isEmpty(arg.getEmail())) {
-      builder = builder.withEmail(arg.getEmail());
+    if (!TextUtils.isEmpty(arg.getVisitorEmail())) {
+      builder = builder.withEmail(arg.getVisitorEmail());
     }
-    if (!TextUtils.isEmpty(arg.getPhoneNumber())) {
-      builder = builder.withPhoneNumber(arg.getPhoneNumber());
+    if (!TextUtils.isEmpty(arg.getVisitorPhone())) {
+      builder = builder.withPhoneNumber(arg.getVisitorPhone());
     }
 
     profileProvider.setVisitorInfo(builder.build(), null);
