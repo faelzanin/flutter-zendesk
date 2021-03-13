@@ -152,7 +152,7 @@ public class ZendeskPigeon {
       Object visitorEmail = map.get("visitorEmail");
       fromMapResult.visitorEmail = (String)visitorEmail;
       Object visitorPhone = map.get("visitorPhone");
-      fromMapResult.visitorPhone = (String)phoneNumber;
+      fromMapResult.visitorPhone = (String)visitorPhone;
       return fromMapResult;
     }
   }
