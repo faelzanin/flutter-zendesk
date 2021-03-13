@@ -80,24 +80,24 @@ class StartChatRequest {
 }
 
 class SetVisitorInfoRequest {
-  String visitorName;
-  String visitorEmail;
-  String visitorPhone;
+  String name;
+  String email;
+  String phone;
 
   Object encode() {
     final Map<Object, Object> pigeonMap = <Object, Object>{};
-    pigeonMap['visitorName'] = visitorName;
-    pigeonMap['visitorEmail'] = visitorEmail;
-    pigeonMap['visitorPhone'] = visitorPhone;
+    pigeonMap['visitorName'] = name;
+    pigeonMap['visitorEmail'] = email;
+    pigeonMap['visitorPhone'] = phone;
     return pigeonMap;
   }
 
   static SetVisitorInfoRequest decode(Object message) {
     final Map<Object, Object> pigeonMap = message as Map<Object, Object>;
     return SetVisitorInfoRequest()
-      ..visitorName = pigeonMap['visitorName'] as String
-      ..visitorEmail = pigeonMap['visitorEmail'] as String
-      ..visitorPhone = pigeonMap['visitorPhone'] as String;
+      ..name = pigeonMap['visitorName'] as String
+      ..email = pigeonMap['visitorEmail'] as String
+      ..phone = pigeonMap['visitorPhone'] as String;
   }
 }
 
