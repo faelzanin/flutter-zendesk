@@ -41,7 +41,7 @@
     
     NSString *backButtonTitle = [self null:input.iosBackButtonTitle
                                         or:NSLocalizedString(@"Back", "")];
-    NSString *messagingName = [self null:input.messagingName or:@"Chat Bot"];
+    NSString *messagingName = [self null:input.messagingName or:@"Herry"];
     
     ZDKMessagingConfiguration *messagingConfiguration = [[ZDKMessagingConfiguration alloc] init];
     messagingConfiguration.name = messagingName;
