@@ -113,9 +113,9 @@
 
 - (void)setVisitorInfo:(nonnull SetVisitorInfoRequest *)input error:(FlutterError * _Nullable __autoreleasing * _Nonnull)error {
     ZDKChatAPIConfiguration *chatAPIConfiguration = [[ZDKChatAPIConfiguration alloc] init];
-    chatAPIConfiguration.visitorInfo = [[ZDKVisitorInfo alloc] initWithName:input.visitorName
-                                                                      email:input.visitorEmail
-                                                                phoneNumber:input.visitorPhone];
+    chatAPIConfiguration.visitorInfo = [[ZDKVisitorInfo alloc] initWithName:input.name
+                                                                      email:input.email
+                                                                phoneNumber:input.phoneNumber];
     ZDKChat.instance.configuration = chatAPIConfiguration;
 }
 
