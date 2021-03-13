@@ -25,9 +25,9 @@ class Zendesk {
     String phoneNumber,
   }) async {
     SetVisitorInfoRequest request = SetVisitorInfoRequest()
-      ..name = name
-      ..email = email
-      ..phoneNumber = phoneNumber;
+      ..visitorName = name
+      ..visitorEmail = email
+      ..visitorPhone = phoneNumber;
 
     await _profileApi.setVisitorInfo(request);
   }

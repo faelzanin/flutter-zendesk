@@ -28,9 +28,9 @@ abstract class ChatApi {
 }
 
 class SetVisitorInfoRequest {
-  String name;
-  String email;
-  String phoneNumber;
+  String visitorName;
+  String visitorEmail;
+  String visitorPhone;
 }
 
 class VisitorTagsRequest {
