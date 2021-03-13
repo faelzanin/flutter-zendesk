@@ -12,6 +12,7 @@
 + (void)registerWithRegistrar:(NSObject<FlutterPluginRegistrar>*)registrar {
     ZendeskPlugin* instance = [[ZendeskPlugin alloc] init];
     ChatApiSetup([registrar messenger], instance);
+    ProfileApiSetup([registrar messenger], instance);
 }
 
 - (id) null:(id)input or:(id)defaultValue {
